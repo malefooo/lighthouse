@@ -1759,7 +1759,7 @@ dependencies = [
 
 [[package]]
 name = "eth2_hashing"
-version = "0.3.0"
+version = "0.2.0"
 dependencies = [
  "cpufeatures",
  "lazy_static",
