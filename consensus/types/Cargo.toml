@@ -71,3 +71,14 @@ arbitrary-fuzz = [
   "swap_or_not_shuffle/arbitrary",
   "tree_hash/arbitrary",
 ]
+
+[patch.crates-io]
+fixed-hash = { git = "https://github.com/paritytech/parity-common", rev="df638ab0885293d21d656dc300d39236b69ce57d" }
+warp = { git = "https://github.com/macladson/warp", rev="7e75acc368229a46a236a8c991bf251fe7fe50ef" }
+eth2_ssz = { path = "../ssz" }
+eth2_ssz_derive = { path = "../ssz_derive" }
+eth2_ssz_types = { path = "../ssz_types" }
+eth2_hashing = { path = "../../crypto/eth2_hashing" }
+tree_hash = { path = "../tree_hash" }
+tree_hash_derive = { path = "../tree_hash_derive" }
+eth2_serde_utils = { path = "../serde_utils" }
