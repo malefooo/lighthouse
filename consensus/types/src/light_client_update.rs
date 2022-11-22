@@ -80,9 +80,14 @@ impl<T: EthSpec> LightClientUpdate<T> {
         attested_state: &mut BeaconState<T>,
         finalized_block: BeaconBlock<T>,
     ) -> Result<Self, Error> {
+        println!("1");
         let altair_fork_epoch = chain_spec
             .altair_fork_epoch
             .ok_or(Error::AltairForkNotActive)?;
+        println!("2");
+        println!("altair_fork_epoch: {}", altair_fork_epoch);
+        println!("attested_state.slot().epoch(T::slots_per_epoch()): {}", attested_state.slot().epoch(T::slots_per_epoch()));
+
         if attested_state.slot().epoch(T::slots_per_epoch()) < altair_fork_epoch {
             return Err(Error::AltairForkNotActive);
         }
