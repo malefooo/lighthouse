@@ -21,7 +21,7 @@ hex = "0.4.2"
 types = { path = "../../consensus/types"}
 merkle_proof = { path = "../../consensus/merkle_proof"}
 eth2_ssz = { path = "../../consensus/ssz" }
-eth2_ssz_derive = "0.3.0"
+eth2_ssz_derive = { path = "../../consensus/ssz_derive" }
 tree_hash = { path = "../../consensus/tree_hash" }
 parking_lot = "0.12.0"
 slog = "2.5.2"
