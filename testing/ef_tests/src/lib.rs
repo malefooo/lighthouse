@@ -12,7 +12,7 @@ pub use handler::*;
 pub use type_name::TypeName;
 use types::{ChainSpec, EthSpec, ForkName};
 
-mod bls_setting;
+pub mod bls_setting;
 mod case_result;
 mod cases;
 mod decode;
