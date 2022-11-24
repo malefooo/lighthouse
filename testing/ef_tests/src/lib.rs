@@ -4,7 +4,7 @@ pub use cases::{
     EffectiveBalanceUpdates, Eth1DataReset, HistoricalRootsUpdate, InactivityUpdates,
     JustificationAndFinalization, ParticipationFlagUpdates, ParticipationRecordUpdates,
     RandaoMixesReset, RegistryUpdates, RewardsAndPenalties, Slashings, SlashingsReset,
-    SyncCommitteeUpdates,
+    SyncCommitteeUpdates,BlsFastAggregateVerify,BlsFastAggregateVerifyInput
 };
 pub use decode::log_file_access;
 pub use error::Error;
@@ -12,7 +12,7 @@ pub use handler::*;
 pub use type_name::TypeName;
 use types::{ChainSpec, EthSpec, ForkName};
 
-pub mod bls_setting;
+mod bls_setting;
 mod case_result;
 mod cases;
 mod decode;
