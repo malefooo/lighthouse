@@ -129,7 +129,7 @@ pub struct ChainSpec {
     pub inactivity_score_bias: u64,
     pub inactivity_score_recovery_rate: u64,
     pub min_sync_committee_participants: u64,
-    pub(crate) domain_sync_committee: u32,
+    pub domain_sync_committee: u32,
     pub(crate) domain_sync_committee_selection_proof: u32,
     pub(crate) domain_contribution_and_proof: u32,
     pub altair_fork_version: [u8; 4],
