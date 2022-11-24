@@ -41,7 +41,7 @@ where
     Pub: TPublicKey,
 {
     /// Instantiates `Self` from a `point`.
-    pub(crate) fn from_point(point: Pub) -> Self {
+    pub fn from_point(point: Pub) -> Self {
         Self { point }
     }
 
