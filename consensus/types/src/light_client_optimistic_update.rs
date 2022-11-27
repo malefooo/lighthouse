@@ -35,9 +35,9 @@ impl<T: EthSpec> LightClientOptimisticUpdate<T> {
         println!("attested_state.slot():{:?}",attested_state.slot());
         println!("T::slots_per_epoch():{:?}",T::slots_per_epoch());
 
-        if attested_state.slot().epoch(T::slots_per_epoch()) < altair_fork_epoch {
-            return Err(Error::AltairForkNotActive);
-        }
+        // if attested_state.slot().epoch(T::slots_per_epoch()) < altair_fork_epoch {
+        //     return Err(Error::AltairForkNotActive);
+        // }
 
         let sync_aggregate = block.body().sync_aggregate()?;
         if sync_aggregate.num_set_bits() < chain_spec.min_sync_committee_participants as usize {
