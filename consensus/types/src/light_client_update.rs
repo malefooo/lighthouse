@@ -116,6 +116,8 @@ impl<T: EthSpec> LightClientUpdate<T> {
             state_root: finalized_block.state_root(),
             body_root: finalized_block.body_root(),
         };
+        println!("finalized_header.tree_hash_root():{:?}",finalized_header.tree_hash_root());
+        println!("beacon_state.finalized_checkpoint().root:{:?}",beacon_state.finalized_checkpoint().root);
         if finalized_header.tree_hash_root() != beacon_state.finalized_checkpoint().root {
             return Err(Error::InvalidFinalizedBlock);
         }
