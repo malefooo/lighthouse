@@ -30,6 +30,11 @@ impl<T: EthSpec> LightClientOptimisticUpdate<T> {
         let altair_fork_epoch = chain_spec
             .altair_fork_epoch
             .ok_or(Error::AltairForkNotActive)?;
+        println!("altair_fork_epoch:{:?}", altair_fork_epoch);
+        println!("attested_state.slot().epoch(T::slots_per_epoch()):{:?}", attested_state.slot().epoch(T::slots_per_epoch()));
+        println!("attested_state.slot():{:?}",attested_state.slot());
+        println!("T::slots_per_epoch():{:?}",T::slots_per_epoch());
+
         if attested_state.slot().epoch(T::slots_per_epoch()) < altair_fork_epoch {
             return Err(Error::AltairForkNotActive);
         }
