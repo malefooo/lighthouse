@@ -88,7 +88,7 @@ impl<T: EthSpec> LightClientUpdate<T> {
         println!("altair_fork_epoch: {}", altair_fork_epoch);
         println!("attested_state.slot().epoch(T::slots_per_epoch()): {}", attested_state.slot().epoch(T::slots_per_epoch()));
 
-        if attested_state.slot().epoch(T::slots_per_epoch()) < altair_fork_epoch {
+        if block.slot().epoch(T::slots_per_epoch()) < altair_fork_epoch {
             return Err(Error::AltairForkNotActive);
         }
 
