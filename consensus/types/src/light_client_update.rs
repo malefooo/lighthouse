@@ -101,8 +101,8 @@ impl<T: EthSpec> LightClientUpdate<T> {
         // Compute and validate attested header.
         let mut attested_header = attested_state.latest_block_header().clone();
         attested_header.state_root = attested_state.tree_hash_root();
-        let attested_period = attested_header
-            .slot
+        let attested_period = block
+            .slot()
             .epoch(T::slots_per_epoch())
             .sync_committee_period(&chain_spec)?;
         if attested_period != signature_period {
